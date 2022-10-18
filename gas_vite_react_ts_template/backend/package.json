@@ -1,0 +1,17 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "main.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/google-apps-script": "^1.0.55",
+    "cpx": "^1.5.0",
+    "google-script-dts-generator": "^1.2.0",
+    "parcel": "^2.7.0",
+    "parcel-optimizer-gas": "^1.0.3",
+    "rimraf": "^3.0.2"
+  },
+  "scripts": {
+    "backend:parcel": "./node_modules/.bin/parcel build src/main.ts  --dist-dir dist --no-source-maps --no-cache; node -e \"require('fs').copyFileSync('main.js', './dist/main.js')\"; rimraf index.js"
+  }
+}
